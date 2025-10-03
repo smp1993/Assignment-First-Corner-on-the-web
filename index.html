@@ -55,6 +55,27 @@
 
     <!-- Simple Bootstrap component to satisfy rubric -->
     <div class="alert alert-info mt-4" role="status">Bootstrap is loaded on this page.</div>
+
+    <!-- Accessibility Notes section -->
+    <section aria-labelledby="access-notes" class="mt-4">
+      <h2 id="access-notes" class="h5">Accessibility Notes (WCAG 2.2 AA Target)</h2>
+      <details class="card-hover p-3">
+        <summary>What I did</summary>
+        <ul class="mb-0">
+          <li>Clear keyboard focus styles and a visible “Skip to main content” link.</li>
+          <li>Semantic landmarks: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+          <li>Consistent heading structure and sufficient color contrast.</li>
+          <li>Descriptive <code>alt</code> attributes for images.</li>
+        </ul>
+      </details>
+
+      <details class="card-hover p-3 mt-2">
+        <summary>Unresolved or to be improved later</summary>
+        <ul class="mb-0">
+          <li>If WAVE flags any minor contrast or structural issues from external images, I’ll adjust colors or markup accordingly.</li>
+        </ul>
+      </details>
+    </section>
   </main>
 
   <footer class="container py-4 border-top">
