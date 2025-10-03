@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home • First Corner</title>
 
-  <!-- Bootstrap (required by the assignment) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Shared styles -->
   <link href="common_style.css" rel="stylesheet">
-
   <meta name="description" content="CSIS 518 - First Corner on the Web">
 </head>
 <body>
-  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="container py-3">
@@ -31,7 +26,8 @@
 
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <!-- Home points to #main to avoid 'redundant link' with brand -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html#main">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="friends.html">Friends</a></li>
@@ -47,16 +43,13 @@
       <span style="letter-spacing:.5px">I’ll iterate and expand the content as I go.</span>
     </p>
 
-    <!-- CTA block (uses .btn-cta for hover effect) -->
     <div class="mt-3">
       <a class="btn btn-cta btn-lg me-2" href="aboutme.html">About Me</a>
       <a class="btn btn-outline-light btn-lg" href="blog.html">Read the Blog</a>
     </div>
 
-    <!-- Simple Bootstrap component to satisfy rubric -->
     <div class="alert alert-info mt-4" role="status">Bootstrap is loaded on this page.</div>
 
-    <!-- Accessibility Notes section -->
     <section aria-labelledby="access-notes" class="mt-4">
       <h2 id="access-notes" class="h5">Accessibility Notes (WCAG 2.2 AA Target)</h2>
       <details class="card-hover p-3">
@@ -72,7 +65,7 @@
       <details class="card-hover p-3 mt-2">
         <summary>Unresolved or to be improved later</summary>
         <ul class="mb-0">
-          <li>If WAVE flags any minor contrast or structural issues from external images, I’ll adjust colors or markup accordingly.</li>
+          <li>Address any new WAVE alerts that may appear with future content.</li>
         </ul>
       </details>
     </section>
