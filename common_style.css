@@ -33,7 +33,7 @@ figure { margin: 0; }
 figcaption { font-size: .9rem; color: var(--muted); }
 blockquote { border-left: 4px solid var(--accent); padding-left: 1rem; margin: 1rem 0; color: #f3f3f3; }
 code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-            background: #1a2233; padding: .2rem .4rem; border-radius: .4rem; }
+            background: #1d2842; color:#f8f8f2; padding: .2rem .4rem; border-radius: .4rem; }  /* stronger contrast */
 button { transition: transform .2s ease, box-shadow .2s ease; }
 footer { border-top: 1px solid #1f283a; margin-top: 2rem; padding: 2rem 0; }
 
@@ -96,37 +96,36 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
    FINAL CONTRAST FIXES
    ============================ */
 
-/* (A) Brand text inside dark navbar must be white (overrides #brand id) */
+/* A) Brand text inside dark navbar (override #brand on dark) */
 .navbar-dark #brand { color: #ffffff !important; }
 
-/* (B) All navbar links/toggler on dark background */
+/* B) All navbar links/toggler on dark background */
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link:visited {
-  color: #ffffff !important; opacity: 1 !important;
-}
+.navbar-dark .navbar-nav .nav-link:visited { color: #ffffff !important; opacity: 1 !important; }
 .navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .show > .nav-link {
-  color: #ffffff !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
+.navbar-dark .navbar-nav .show > .nav-link { color: #ffffff !important; text-decoration: underline; text-underline-offset: 3px; }
 .navbar-dark .navbar-toggler { border-color: #ffffff !important; }
 .navbar-dark .navbar-toggler-icon { filter: invert(1) contrast(200%) !important; }
 
-/* (C) Outline primary buttons on dark backgrounds (e.g., Friends cards) */
+/* C) Outline primary buttons on dark backgrounds (e.g., Friends cards) */
 .btn-outline-primary,
-a.btn.btn-outline-primary {
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-}
+a.btn.btn-outline-primary { color: #ffffff !important; border-color: #ffffff !important; }
 .btn-outline-primary:hover,
-a.btn.btn-outline-primary:hover {
-  color: #000000 !important;
-  background: #ffffff !important;
-  border-color: #ffffff !important;
-}
+a.btn.btn-outline-primary:hover { color: #000000 !important; background: #ffffff !important; border-color: #ffffff !important; }
 
-/* (D) Alert on Home: dark text on light background + link color */
+/* D) Alert on Home: dark text on light background + link color */
 .alert-info { color: #0b0f19 !important; }
 .alert-info a { color: #0a58ca !important; text-decoration: underline; }
+
+/* E) Muted/small text should never drop contrast on dark blocks */
+.text-muted, .text-secondary, small, .small { color: #dcdfe6 !important; opacity: 1 !important; }
+
+/* F) Links inside dark containers (cards, post, footer, alerts) */
+.card a:not(.btn),
+.post a:not(.btn),
+footer a,
+.alert a { color: #cfe2ff !important; text-decoration: underline; }
+
+/* G) Blog date line on dark background */
+.post .text-muted { color: #ffffff !important; opacity: 1 !important; }
