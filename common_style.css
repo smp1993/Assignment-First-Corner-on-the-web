@@ -80,9 +80,7 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .lift:hover { transform: translateY(-6px) scale(1.01); }
 
-/* -------------------------------
-   Dark theme adjustments for readability
-   ------------------------------- */
+/* Dark theme adjustments for readability on cards */
 .card {
   --bs-card-bg: var(--card);
   --bs-card-color: var(--text);
@@ -94,20 +92,43 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
 .card .card-title,
 .card .card-text { color: var(--text) !important; }
 
-/* -------------------------------
-   Accessibility tweaks to pass WAVE contrast checks
-   ------------------------------- */
-/* 1) Navbar links on .bg-dark: make them brighter for 4.5:1+ contrast */
-.navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,.9) !important; }
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link.active { color: #fff !important; }
+/* ============================
+   FINAL CONTRAST FIXES (WAVE)
+   ============================ */
+
+/* 1) Navbar links and brand on .bg-dark */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:visited {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.navbar-dark .navbar-toggler { border-color: #ffffff !important; }
+.navbar-dark .navbar-toggler-icon { filter: invert(1) contrast(200%) !important; }
 
 /* 2) Outline primary buttons on dark backgrounds (e.g., Friends cards) */
-.btn-outline-primary {
-  --bs-btn-color: #ffffff;
-  --bs-btn-border-color: #ffffff;
-  --bs-btn-hover-bg: #ffffff;
-  --bs-btn-hover-border-color: #ffffff;
-  --bs-btn-hover-color: #000000;
+.btn-outline-primary,
+a.btn.btn-outline-primary {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.btn-outline-primary:hover,
+a.btn.btn-outline-primary:hover {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* 3) Links inside dark containers (cards/footer/alerts) */
+.card a:not(.btn),
+footer a,
+.alert a {
+  color: #cfe2ff !important;          /* very light blue */
+  text-decoration: underline;
 }
