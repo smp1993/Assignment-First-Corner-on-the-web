@@ -93,15 +93,17 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
 .card .card-text { color: var(--text) !important; }
 
 /* ============================
-   FINAL CONTRAST FIXES (WAVE)
+   FINAL CONTRAST FIXES
    ============================ */
 
-/* 1) Navbar links and brand on .bg-dark */
+/* (A) Brand text inside dark navbar must be white (overrides #brand id) */
+.navbar-dark #brand { color: #ffffff !important; }
+
+/* (B) All navbar links/toggler on dark background */
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:visited {
-  color: #ffffff !important;
-  opacity: 1 !important;
+  color: #ffffff !important; opacity: 1 !important;
 }
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .show > .nav-link {
@@ -112,7 +114,7 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
 .navbar-dark .navbar-toggler { border-color: #ffffff !important; }
 .navbar-dark .navbar-toggler-icon { filter: invert(1) contrast(200%) !important; }
 
-/* 2) Outline primary buttons on dark backgrounds (e.g., Friends cards) */
+/* (C) Outline primary buttons on dark backgrounds (e.g., Friends cards) */
 .btn-outline-primary,
 a.btn.btn-outline-primary {
   color: #ffffff !important;
@@ -125,10 +127,6 @@ a.btn.btn-outline-primary:hover {
   border-color: #ffffff !important;
 }
 
-/* 3) Links inside dark containers (cards/footer/alerts) */
-.card a:not(.btn),
-footer a,
-.alert a {
-  color: #cfe2ff !important;          /* very light blue */
-  text-decoration: underline;
-}
+/* (D) Alert on Home: dark text on light background + link color */
+.alert-info { color: #0b0f19 !important; }
+.alert-info a { color: #0a58ca !important; text-decoration: underline; }
