@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Friends • First Corner</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Shared CSS -->
   <link href="common_style.css" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +25,7 @@
 
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#main">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="friends.html">Friends</a></li>
@@ -42,7 +40,6 @@
       <p class="mb-0">A small responsive grid using Bootstrap’s Flexbox-based grid system and Cards.</p>
     </section>
 
-    <!-- Bootstrap grid (Flexbox) -->
     <section class="row g-4">
       <!-- Card 1 -->
       <article class="col-12 col-sm-6 col-lg-4 col-xl-3">
@@ -51,7 +48,11 @@
           <div class="card-body">
             <h2 class="h6 card-title">Alex</h2>
             <p class="card-text">Hiker and coffee enthusiast.</p>
-            <a class="btn btn-sm btn-outline-primary" href="https://example.com" target="_blank" rel="noopener">Profile</a>
+            <a class="btn btn-sm btn-outline-primary"
+               href="https://example.com" target="_blank" rel="noopener noreferrer"
+               aria-label="Open Alex’s profile (opens in a new tab)">
+              Profile <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </article>
@@ -63,7 +64,11 @@
           <div class="card-body">
             <h2 class="h6 card-title">Sam</h2>
             <p class="card-text">Photographer and traveler.</p>
-            <a class="btn btn-sm btn-outline-primary" href="https://example.com" target="_blank" rel="noopener">Profile</a>
+            <a class="btn btn-sm btn-outline-primary"
+               href="https://example.com" target="_blank" rel="noopener noreferrer"
+               aria-label="Open Sam’s profile (opens in a new tab)">
+              Profile <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </article>
@@ -75,7 +80,11 @@
           <div class="card-body">
             <h2 class="h6 card-title">Taylor</h2>
             <p class="card-text">Plays guitar in a band.</p>
-            <a class="btn btn-sm btn-outline-primary" href="https://example.com" target="_blank" rel="noopener">Profile</a>
+            <a class="btn btn-sm btn-outline-primary"
+               href="https://example.com" target="_blank" rel="noopener noreferrer"
+               aria-label="Open Taylor’s profile (opens in a new tab)">
+              Profile <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </article>
@@ -87,7 +96,11 @@
           <div class="card-body">
             <h2 class="h6 card-title">Jordan</h2>
             <p class="card-text">Avid reader and writer.</p>
-            <a class="btn btn-sm btn-outline-primary" href="https://example.com" target="_blank" rel="noopener">Profile</a>
+            <a class="btn btn-sm btn-outline-primary"
+               href="https://example.com" target="_blank" rel="noopener noreferrer"
+               aria-label="Open Jordan’s profile (opens in a new tab)">
+              Profile <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </article>
