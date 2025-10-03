@@ -79,3 +79,18 @@ a:focus-visible, .nav-link:focus-visible, button:focus-visible {
 .bento { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .lift:hover { transform: translateY(-6px) scale(1.01); }
+
+/* -------------------------------
+   FIX: Make Bootstrap cards readable on dark backgrounds
+   ------------------------------- */
+.card {
+  /* override Bootstrap CSS variables for cards */
+  --bs-card-bg: var(--card);
+  --bs-card-color: var(--text);
+  --bs-heading-color: var(--text);
+  background-color: var(--card) !important;
+  color: var(--text) !important;
+  border-color: #223 !important;
+}
+.card .card-title,
+.card .card-text { color: var(--text) !important; }
